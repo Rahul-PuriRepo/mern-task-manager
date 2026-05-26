@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000/api/auth/";
+const API_URL = "https://mern-task-manager-eybb.onrender.com/api/users";
 
 
 // Register User
