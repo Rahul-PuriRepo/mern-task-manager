@@ -25,9 +25,9 @@ const Register = () => {
 
     try {
       const res = await axios.post(
-        "https://mern-task-manager-eybb.onrender.com/api/users/register",
-        formData
-      );
+  "https://mern-task-manager-eybb.onrender.com/api/auth/register",
+  formData
+);
 
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("user", JSON.stringify(res.data));
