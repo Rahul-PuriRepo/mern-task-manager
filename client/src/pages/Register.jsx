@@ -29,14 +29,20 @@ const Register = () => {
   formData
 );
 
-      localStorage.setItem("token", res.data.token);
-      localStorage.setItem("user", JSON.stringify(res.data));
+      localStorage.setItem(
+  "userInfo",
+  JSON.stringify(res.data)
+);
 
       navigate("/dashboard");
     } catch (error) {
-      console.log(error);
-      alert("Registration Failed");
-    }
+  console.log(error);
+
+  alert(
+    error.response?.data?.message ||
+    "Registration Failed"
+  );
+}
   };
 
   return (
